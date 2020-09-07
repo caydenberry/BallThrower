@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 8226457659708453801}
   - component: {fileID: 1112733362213718431}
   - component: {fileID: 6651166235829630310}
+  - component: {fileID: -5192174041593256573}
   m_Layer: 0
   m_Name: goalBoard_prefab
   m_TagString: Untagged
@@ -172,3 +173,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-5192174041593256573
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4931835762747392442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5495902117074765545, guid: 501af5d4f2d3d6b4a86a3965e433fef1, type: 3}
