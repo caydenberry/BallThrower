@@ -25,7 +25,7 @@ public class Shoot : MonoBehaviour
         {
             isShooting = true;
             Instantiate(ball, shotOrigin, shotRotation);
-            Debug.Log("SHOOT YOUR SHOT");
+            //Debug.Log("SHOOT YOUR SHOT");
         }
         else
             isShooting = false;

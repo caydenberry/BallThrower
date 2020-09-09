@@ -5,10 +5,14 @@ using UnityEngine;
 public class Goalpost_Script : MonoBehaviour
 {
     [SerializeField] GameObject ball;
+    [SerializeField] Texture green;
+    Renderer scoreRen;
+    bool isScored;
     // Start is called before the first frame update
     void Start()
     {
-
+        isScored = false;
+        scoreRen = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -17,8 +21,14 @@ public class Goalpost_Script : MonoBehaviour
         
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnTriggerEnter(Collider ball)
     {
-        
+        if(isScored == false)
+        {
+            //score + 1 on HUD
+            scoreRen.material.SetTexture("_MainTex", green);
+            isScored = true;
+            Debug.Log("Score");
+        }
     }
 }
