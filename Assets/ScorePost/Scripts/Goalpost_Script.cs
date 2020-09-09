@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Goalpost_Script : MonoBehaviour
 {
+    [SerializeField] GameObject ball;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,6 +13,11 @@ public class Goalpost_Script : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         
     }
