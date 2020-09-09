@@ -9,25 +9,25 @@ public class ballScript : MonoBehaviour
     Vector3 frontForce;
     Rigidbody rb_ball;
 
+
     void Start()
     {
-        //rb_ball.GetComponent<Rigidbody>();
+        frontForce = this.transform.forward;
 
-        //this.AddForce(frontForce, ForceMode.Impulse);
+        frontForce.Set(frontForce[0] * 10,frontForce[1] * 10,frontForce[2] * 10);
+        //Get self rigidbody
+        rb_ball = this.GetComponent<Rigidbody>();
 
-        StartCoroutine(DelayRoutine());
+        //add force to rigidbody
+        rb_ball.AddForce(frontForce, ForceMode.Impulse);
 
-        //Destroy(rb_ball);
+        //destroy the self
+        Destroy(gameObject, 5);
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    IEnumerator DelayRoutine()
-    {
-        yield return new WaitForSeconds(5);
     }
 }
