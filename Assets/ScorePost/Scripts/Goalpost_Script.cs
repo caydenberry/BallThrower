@@ -29,6 +29,7 @@ public class Goalpost_Script : MonoBehaviour
             scoreRen.material.SetTexture("_MainTex", green);
             isScored = true;
             Debug.Log("Score");
+            //masterScript.incrementScore();
         }
     }
 }
