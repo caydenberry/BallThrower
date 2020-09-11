@@ -2,26 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class masterScript : MonoBehaviour
+namespace master
 {
-    int score;
-    // Start is called before the first frame update
-    void Start()
+    public class masterScript : MonoBehaviour
     {
-        score = 0;
-        while(score <= 3)
-        {}
-        Debug.Log("You win!");
-    }
+        int score;
+        bool isWin;
+        // Start is called before the first frame update
+        void Start()
+        {
+            score = 0;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        private void Update()
+        {
+            if(score == 4 && isWin == false)
+            {
+                Debug.Log("You Win!");
+                isWin = true;
+            }
+        }
 
-    public void incrementScore()
-    {
-        score++;
+        public void incrementScore()
+        {
+            score++;
+            Debug.Log("Score is " + score);
+        }
     }
 }

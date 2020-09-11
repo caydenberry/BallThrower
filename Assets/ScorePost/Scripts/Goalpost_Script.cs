@@ -2,34 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goalpost_Script : MonoBehaviour
+namespace master
 {
-    [SerializeField] GameObject ball;
-    [SerializeField] Texture green;
-    Renderer scoreRen;
-    bool isScored;
-    // Start is called before the first frame update
-    void Start()
+    public class Goalpost_Script : MonoBehaviour
     {
-        isScored = false;
-        scoreRen = GetComponent<Renderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider ball)
-    {
-        if(isScored == false)
+        [SerializeField] GameObject ball;
+        [SerializeField] Texture green;
+        [SerializeField] GameObject master;
+        masterScript ms;
+        Renderer scoreRen;
+        bool isScored;
+        // Start is called before the first frame update
+        void Start()
         {
-            //score + 1 on HUD
-            scoreRen.material.SetTexture("_MainTex", green);
-            isScored = true;
-            Debug.Log("Score");
-            //masterScript.incrementScore();
+            isScored = false;
+            scoreRen = GetComponent<Renderer>();
+            ms = master.GetComponent<masterScript>();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        private void OnTriggerEnter(Collider ball)
+        {
+            if (isScored == false)
+            {
+                //score + 1 on HUD
+                scoreRen.material.SetTexture("_MainTex", green);
+                isScored = true;
+                Debug.Log("Score");
+                ms.incrementScore();
+            }
         }
     }
 }
