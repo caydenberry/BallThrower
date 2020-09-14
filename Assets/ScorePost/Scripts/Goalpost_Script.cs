@@ -7,7 +7,7 @@ namespace master
     public class Goalpost_Script : MonoBehaviour
     {
         [SerializeField] GameObject ball;
-        [SerializeField] Texture green;
+        [SerializeField] Material green;
         [SerializeField] GameObject master;
         masterScript ms;
         Renderer scoreRen;
@@ -30,10 +30,8 @@ namespace master
         {
             if (isScored == false)
             {
-                //score + 1 on HUD
-                scoreRen.material.SetTexture("_MainTex", green);
+                scoreRen.material = green;
                 isScored = true;
-                Debug.Log("Score");
                 ms.incrementScore();
             }
         }

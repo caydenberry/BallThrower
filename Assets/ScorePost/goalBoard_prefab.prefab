@@ -107,7 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 4709152752997384363, guid: 3aceef019ada0be4a9bbe92f807f221e, type: 3}
-  green: {fileID: 2800000, guid: 99886362bd0d155458f0244d1ebade25, type: 3}
+  green: {fileID: 2100000, guid: 5f7bed729cf808f4bab7775f28285044, type: 2}
+  master: {fileID: 0}
 --- !u!1 &4931835762747392442
 GameObject:
   m_ObjectHideFlags: 0
